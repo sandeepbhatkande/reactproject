@@ -1,0 +1,3 @@
+export const CHART_CONSTANT = {
+    UPDATE_CHART_DATA: "UPDATE_CHART_DATA"
+}

@@ -1,0 +1,12 @@
+{
+    "welcome": "Welcome to React App!",
+    "save": "SAVE",
+    "cancel": "CANCEL",
+    "ok": "OK",
+    "error": "Error",
+    "confirmation": "Confirmation",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info",
+    "DontShowAgainMesg": "Do not show this message again."
+}

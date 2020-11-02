@@ -1,0 +1,5 @@
+export const APP_CONSTANT = {
+    INIT_APP: 'INIT_APP',
+    SHOW_LOADING: 'SHOW_LOADING',
+    HIDE_LOADING: 'HIDE_LOADING'
+};

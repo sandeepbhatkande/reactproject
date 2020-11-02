@@ -1,0 +1,42 @@
+@import 'default_variables.scss';
+
+.modal_header_bg {
+	background-color: $headerBg;
+}
+
+.primary_btn {
+	background-color: $prmBtnBg;
+}
+
+.primary_btn:not(.disable):hover {
+	background-color: $prmBtnHoverBg;
+}
+
+.disable:not(.secondary_btn) {
+	background-color: $disable;
+}
+
+
+.error_warning_bg {
+	background-color: $errorWarningBg;
+}
+
+.success_msg_bg {
+	background-color: $successMessageBg;
+}
+
+.msg_error_primary_btn_bg {
+	background-color: $msgErrorPrimaryBtnBg;
+}
+
+.msg_success_primary_btn_bg {
+	background-color: $msgSuccessPrimaryBtnBg;
+}
+
+.confirmation_msg_btn_color {
+	color: $confirmationMsgBtnColor;
+}
+
+.active_icon_color {
+	color: $activeIconColor !important;
+}

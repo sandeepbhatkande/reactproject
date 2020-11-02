@@ -1,0 +1,4 @@
+export const DASHBOARD_CONSTANT = {
+    GET_CHART_DATA: "GET_CHART_DATA"
+
+}

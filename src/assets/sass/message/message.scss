@@ -1,0 +1,112 @@
+.message_cnt {
+    top: 0px;
+    left: 0px;
+    z-index: 11;
+
+    background: {
+        color: transparent;
+    }
+
+    .message_body {
+        width: 230px;
+        height: 334px;
+        top: calc(50% - 167px);
+        left: calc(50% - 115px);
+        border-radius: 6px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24);
+        animation: moveDown 0.6s;
+
+        .message_hdr {
+            height: 190px;
+
+            border: {
+                top-left-radius: 6px;
+                top-right-radius: 6px;
+            }
+
+            svg {
+                width: 100%;
+                height: 190px;
+            }
+
+            img {
+                width: 114px;
+                height: 117px;
+                
+                margin: {
+                    left: calc(50% - 57px);
+                    top: calc(50% - 95px)
+                }
+            }
+        }
+
+        .msg_text_cnt span:first-child {
+            opacity: 0.87;
+
+            font: {
+                size: 18px;
+            }
+        }
+
+        .msg_text_cnt span:last-child {
+            line-height: 1.33;
+            letter-spacing: 0.27px;
+            opacity: 0.6;
+            font-size: 12px;
+            height: 60px;
+
+            padding: {
+                left: 30px;
+                right: 30px;
+            }
+
+            margin: {
+                top: 10px;
+            }
+        }
+
+        .msg_text_cnt.long_text span:last-child {
+            height: 70px;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        .msg_footer {
+            .msg_btn {
+                border: none;
+                outline: none;
+                
+                border: {
+                    radius: 16px;
+                }
+    
+                font: {
+                    size: 14px;
+                }
+            }
+        }
+
+        .msg_footer:not(.confirmation_msg_footer) {
+            .msg_btn {
+                width: 110px;
+                height: 32px;
+            }
+        }
+
+        .msg_footer.confirmation_msg_footer {
+            .msg_btn {
+                width: 71px;
+                height: 32px;
+            }
+
+            .msg_btn:first-child {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@keyframes moveDown {
+    from {top: -334px;}
+    to {top: calc(50% - 167px);}
+}

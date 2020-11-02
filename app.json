@@ -1,0 +1,28 @@
+{
+      "id": "${app-name}",
+          "container": {
+                "type": "DOCKER",
+                "docker": {
+                  "image": "${docker_image}",
+                  "privileged": true,
+                  "network": "BRIDGE",
+                  "portMappings": [
+                                        {
+                                                "containerPort": 5000,
+                                                "hostPort": 0,
+                                                "protocol": "tcp",
+												"servicePort": 0
+                                        }
+                                ]
+                }
+          },
+          "instances": 1,
+          "cpus": 1,
+          "public_ip":true,
+          "mem": 512,
+		  "labels": {
+			"HAPROXY_0_VHOST": "${dc-os-public-url}",
+			"HAPROXY_GROUP": "external"
+			}
+}
+

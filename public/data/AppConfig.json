@@ -1,0 +1,88 @@
+{
+    "SM_projectId": "TempProjectId",
+    "board_id": "TempBoardId",
+    "board_plan": "recommended",
+    "firstLoad": false,
+    "notificationCount": 5,
+    "card_type_list": [{
+        "cardCode": "UST",
+        "cardColor": null,
+        "cardLevel": "SwimLevel1",
+        "cardType": "UST",
+        "cardTypeName": "User Story",
+        "createdBy": null,
+        "created_Date": null,
+        "enterpriseId": "5d8ddd41d06e1d357061ef4f",
+        "id": "5dc94089ff128ae71de8ecc6",
+        "modifiedBy": null,
+        "modified_Date": null,
+        "sm_projectId": "TempProjectId"
+    }, {
+        "cardCode": "ISS",
+        "cardColor": null,
+        "cardLevel": null,
+        "cardType": "ISS",
+        "cardTypeName": "Issue",
+        "createdBy": null,
+        "created_Date": null,
+        "enterpriseId": "5d8ddd41d06e1d357061ef4f",
+        "id": "5dc940b7ff128ae71de8ece9",
+        "modifiedBy": null,
+        "modified_Date": null,
+        "sm_projectId": "TempProjectId"
+    }, {
+        "cardCode": "CHR",
+        "cardColor": null,
+        "cardLevel": "SwimLevel1",
+        "cardType": "CHR",
+        "cardTypeName": "Change Request",
+        "createdBy": null,
+        "created_Date": null,
+        "enterpriseId": "5d8ddd41d06e1d357061ef4f",
+        "id": "5dca5adec7d9e9a901812dd5",
+        "modifiedBy": null,
+        "modified_Date": null,
+        "sm_projectId": "TempProjectId"
+    }, {
+        "cardCode": "DFT",
+        "cardColor": null,
+        "cardLevel": "SwimLevel3",
+        "cardType": "DFT",
+        "cardTypeName": "Defect",
+        "createdBy": null,
+        "created_Date": null,
+        "enterpriseId": "5d8ddd41d06e1d357061ef4f",
+        "id": "5dca5af1c7d9e9a901812dde",
+        "modifiedBy": null,
+        "modified_Date": null,
+        "sm_projectId": "TempProjectId"
+    }, {
+        "cardCode": "EPC",
+        "cardColor": null,
+        "cardLevel": "SwimLevel1",
+        "cardType": "EPC",
+        "cardTypeName": "Technical User Story",
+        "createdBy": null,
+        "created_Date": null,
+        "enterpriseId": "5d8ddd41d06e1d357061ef4f",
+        "id": "5dca5b0dc7d9e9a901812dea",
+        "modifiedBy": null,
+        "modified_Date": null,
+        "sm_projectId": "TempProjectId"
+    }],
+    "user_data": {
+        "id": "sdae1234"
+    },
+	"actions": {
+		"zoomLevel": {
+			"value": "4"
+		}
+    },
+    "versionInfo": {
+        "sourcesupporttedversion": {
+            "SE": "6.7"
+        }
+    },
+    "enterpriseType": "SE",
+    "customCSSFiles": []
+}

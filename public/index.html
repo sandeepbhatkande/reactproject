@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>App</title>
+    <script>
+        function onSMBodyLoad() {
+          var w_userAgent = navigator.userAgent;
+          /* MSIE used to detect old browsers and Trident used to newer ones*/
+          var w_isIE = w_userAgent.indexOf("MSIE ") > -1 || w_userAgent.indexOf("Trident/") > -1;
+
+          if ( w_isIE ) {
+            document.getElementById('root').style.display = "none";
+
+            var w_errorDiv = document.createElement('div');
+            w_errorDiv.innerHTML = "App does not support IE browser, please use Chrome/Mozilla/Edge";
+            w_errorDiv.style.position = "absolute";
+            w_errorDiv.style.top = "50%";
+            w_errorDiv.style.left = "50%";
+            w_errorDiv.style.transform = "translate(-50%,-50%)";
+            w_errorDiv.style.fontSize = "18px";
+            w_errorDiv.style.color = "#a3a3a3";
+
+            document.body.appendChild(w_errorDiv);
+          }
+        }
+    </script>
+  </head>
+  <body onload="onSMBodyLoad()">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="pos_abs">
+      <div style='height:100%;width:100%;text-align:center;position: absolute;top: 0px;left: 0px;'>
+        <img src='svg/loading.svg' alt='Loading' style='height:100px;width:100px;position:relative;top:50%;transform:translateY(-50%)'></img>
+      </div>
+    </div>
+  </body>
+</html>

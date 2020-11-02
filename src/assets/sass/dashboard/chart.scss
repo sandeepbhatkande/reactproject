@@ -1,0 +1,139 @@
+.upGreenArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4.5px 12px 4.5px;
+    border-color: transparent transparent #00ff00 transparent;
+ }
+   
+ .downRedArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 4.5px 0 4.5px;
+    border-color: #ff0000 transparent transparent transparent;
+ }
+ 
+ .upArrow{
+   position: relative;
+   top: -15px;
+   left: -10px;
+   width:0;
+   height:0;
+   border: 6px solid transparent;
+   border-bottom-color: #00ff00;
+ }
+ .upArrow:after{
+   position: absolute;
+   content: '';
+   top: 20px;
+   left: -3px;
+   width: 6px;
+   height: 10px;
+   background: #00ff00;
+ }
+ 
+ .downArrow{
+   position: relative;
+   top: 18px;
+   left: -10px;
+   width: 0;
+   height: 0;
+   border: 6px solid transparent;
+   border-top-color: #ff0000;
+ }
+ .downArrow:after{
+   position: absolute;
+   content: '';
+   top: -15px;
+   left: -3px;
+   width: 6px;
+   height: 10px;
+   background: #ff0000;
+ }
+ 
+ 
+ /* d3 candle stick start */
+ 
+ .axis path,
+ .axis line {
+     fill: none;
+     stroke: black;
+     shape-rendering: crispEdges;
+ }
+ 
+ .axis text {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 11px;
+     fill: black;
+ }
+ 
+ /* d3 candle stick end */
+ 
+ body {
+   background-color: white;
+ }
+
+ div.tooltip {	
+  position: absolute;			
+  text-align: center;			
+  width: auto;			
+  max-width: 250px;		
+  height: auto;						
+  font: 12px sans-serif;		
+  background: #FFFFFF;	
+  border: 1px solid blue;
+  color:#000000;
+  border-radius: 2px;			
+  pointer-events: none;
+  padding: 5px;	
+}
+
+.chart_header {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #000000;
+  background-color: #c3c3c3;
+  width: 100%;
+
+  .chartHeaderAttr {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    padding-left: 5px;
+  }
+
+  .chartHeaderValue {
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    color: blue;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+.chart_sub_header {
+    border: 1px solid cornflowerblue;
+    height: 35px;
+    background: #2a5c8e;
+    padding-left: 10px;
+  .subVal {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border: 1px solid blue;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 2px;
+    background: cornflowerblue;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 2px 4px;
+    cursor: pointer;
+  }
+  .subVal.active {
+    color: #000000;
+    background: #FFFFFF;
+  }
+}

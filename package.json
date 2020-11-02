@@ -1,0 +1,70 @@
+{
+  "name": "reactapp",
+  "version": "1.0.0",
+  "private": true,
+  "author": "sbhatkande",
+  "homepage": "http://localhost:3000/",
+  "dependencies": {
+    "d3": "^6.2.0",
+    "dompurify": "^2.0.7",
+    "draft-convert": "^2.1.8",
+    "draft-js": "^0.11.1",
+    "file-saver": "^2.0.2",
+    "i18next": "^19.0.3",
+    "i18next-browser-languagedetector": "^4.0.1",
+    "is-touch-device": "^1.0.1",
+    "jquery": "^3.4.1",
+    "jszip": "^3.2.2",
+    "node-sass": "^4.12.0",
+    "react": "^16.12.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^16.12.0",
+    "react-i18next": "^9.0.10",
+    "react-load-image": "^0.1.7",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.0.1",
+    "react-select": "^3.0.8",
+    "react-test-renderer": "^16.12.0",
+    "react-tooltip": "^3.11.1",
+    "redux": "^4.0.2",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "save": "^2.4.0",
+    "unfetch": "^4.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "jest-html-reporters": "^1.2.1",
+    "jest-json-reporter": "^1.2.2",
+    "react-test-renderer": "^16.12.0"
+  }
+}

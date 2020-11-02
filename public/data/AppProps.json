@@ -1,0 +1,7 @@
+{
+	"url": "#URL#",
+	"querydata_username": "admin",
+	"querydata_password": "IjExMTExMSI=",
+	"ELKURL": "#ELK_URL#",
+	"isELKEnabled": false
+}
