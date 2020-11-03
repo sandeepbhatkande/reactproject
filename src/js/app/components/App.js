@@ -1,12 +1,20 @@
 import React from 'react';
 import MessageContainer from 'js/modules/message/components/MessageContainer';
 import DashboardContainer from 'js/modules/dashboard/components/DashboardContainer'
+import {getChartData} from 'js/modules/dashboard/actions/DashboardAction'
 
 class App extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {};
+        this._handleWindowResize = this._handleWindowResize.bind(this);
+
+        window.addEventListener("resize", this._handleWindowResize);
+    }
+
+    _handleWindowResize () {
+        this.props.store.dispatch(getChartData())
     }
 
     componentDidMount() {
@@ -27,7 +35,11 @@ class App extends React.Component {
             </React.Fragment>
         )
     }
+    componentWillUnmount() {
+        window.removeEventListener("resize", this._handleWindowResize);
+    }
     
 }
+
 
 export default App

@@ -43,16 +43,11 @@ class ChartView extends React.Component {
 
         const months = {0 : 'Jan', 1 : 'Feb', 2 : 'Mar', 3 : 'Apr', 4 : 'May', 5 : 'Jun', 6 : 'Jul', 7 : 'Aug', 8 : 'Sep', 9 : 'Oct', 10 : 'Nov', 11 : 'Dec'}
 
-        var dateFormat = d3.timeParse("%Y-%m-%d");
-        for (var i = 0; i < w_data.length; i++) {
-            w_data[i]['Date'] = dateFormat((w_data[i]["Date"].getFullYear()+"-"+w_data[i]["Date"].getDay()+"-"+w_data[i]["Date"].getMonth()))
-        } 
-
         w_data.reverse()
 
-        const margin = {top: 15, right: 65, bottom: 100, left: 50},
+        const margin = {top: 35, right: 65, bottom: 100, left: 50},
         w = window.innerWidth - margin.left - margin.right,
-        h = 625 - margin.top - margin.bottom;
+        h =  window.innerHeight - 100 - margin.top - margin.bottom;
 
         d3.select("#container").selectAll("g").remove()
         var svg = d3.select("#container")
@@ -126,7 +121,7 @@ class ChartView extends React.Component {
                 tooltipDiv.transition()		
                 .duration(200)		
                 .style("opacity", .9);		
-                tooltipDiv.html("Date: " + (i.Date.getFullYear()+"-"+i.Date.getDay()+"-"+months[i.Date.getMonth()]) + "<br/> Volume: "  + i.Volume)	
+                tooltipDiv.html("Date: " + (i.Date.getFullYear()+"-"+ i.Date.getDate()+"-"+months[i.Date.getMonth()]) + "<br/> Volume: "  + i.Volume)	
                 .style("left", (d.pageX) + "px")		
                 .style("top", (d.pageY - 28) + "px");	
 
@@ -281,6 +276,8 @@ class ChartView extends React.Component {
                     <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.High}</span>
                     <span className="chartHeaderAttr">Low :</span>
                     <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.Low}</span>
+                    <span className="chartHeaderAttr">Open :</span>
+                    <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.Open}</span>
                     <span className="chartHeaderAttr">Close :</span>
                     <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.Close}</span>
                 </div>

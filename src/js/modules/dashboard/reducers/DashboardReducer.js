@@ -12,7 +12,7 @@ const DashboardReducer = (state = initialState, action) => {
                 chartData: action.payload.data
             }
         case DASHBOARD_CONSTANT.UPDATE_LIVE_CHART:
-            if(state.liveChartData && state.liveChartData.length > 200) {
+            if(state.liveChartData && state.liveChartData.length > 100) {
                 state.liveChartData.shift()
             }
             return {

@@ -10,7 +10,9 @@ function subscribeToStock(cb) {
     socket.emit('sub', {state: true})
     socket.on('data', (data, ack) =>{ 
         cb(null, data)
-        ack(CLIENT_ACKNOWLEDGEMENT)
+        setInterval(()=> {
+            ack(CLIENT_ACKNOWLEDGEMENT)
+        }, 1000)
     })
 }
 

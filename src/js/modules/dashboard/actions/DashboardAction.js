@@ -21,14 +21,6 @@ export const loadChartData = (data) => {
 }
 
 export const getChartData = () => {
-    var socket = io('http://kaboom.rksv.net/watch');
-    socket.on('sub', function(data){ 
-        console.log("open" + data)
-    });
-    socket.on('event', function(data){
-        console.log("event"+data)
-    });
-    socket.on('disconnect', function(){console.log("close")});
     return dispatch => {
         const url = "http://kaboom.rksv.net/api/historical?interval=1"
         AppUtil.ajax(url, undefined, a_response => {
