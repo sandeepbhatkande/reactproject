@@ -7,8 +7,6 @@ import store from './js/store/StoreConfigure';
 import './assets/sass/styles.scss';
 import AppHelper from 'js/app/AppHelper';
 import { setAppStore } from 'js/utils/AppUtil';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './i18n';
 
 setAppStore(store);
 

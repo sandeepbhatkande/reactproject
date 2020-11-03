@@ -1,6 +1,5 @@
 import { DASHBOARD_CONSTANT } from '../constants/DashboardConstant';
 import AppUtil from 'js/utils/AppUtil';
-import io from 'socket.io-client';
 
 export const updateLiveChart= data => {
     return {

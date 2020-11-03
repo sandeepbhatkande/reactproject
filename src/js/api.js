@@ -17,7 +17,6 @@ function subscribeToStock(cb) {
 }
 
 function unSubscribeToStock() {
-    const CLIENT_ACKNOWLEDGEMENT = 1
     socket.emit('unsub', {state: false})
 }
 export { subscribeToStock , unSubscribeToStock};

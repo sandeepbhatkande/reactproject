@@ -1,6 +1,5 @@
 @import "fonts/fonts.scss";
 @import "mixin/common_mixin.scss";
-@import "icons/font-icons.scss";
 
 * {
 	margin: 0;
@@ -53,8 +52,6 @@ input[type=number] {
 }
 
 @import "message/message.scss";
-@import "filter/filter.scss";
-@import "listing/listing.scss";
 @import "dashboard/chart.scss";
 
 #root {

@@ -58,8 +58,6 @@ class ChartView extends React.Component {
 
         let dates = w_data.map(data => (data.Date)).sort((a, b)=>{return a - b})
         
-        var xmin = d3.min(w_data.map(r => r.Date));
-        var xmax = d3.max(w_data.map(r => r.Date));
         var xScale = d3.scaleLinear().domain([-1, dates.length])
                         .range([0, w])
         var xDateScale = d3.scaleQuantize().domain([0, dates.length]).range(dates)
@@ -200,9 +198,6 @@ class ChartView extends React.Component {
 			stems.attr("x2", (d, i) => xScaleZ(i) - xBand.bandwidth()/2 + xBand.bandwidth()*0.5);
 
 			hideTicksWithoutLabel();
-/* 
-			gX.selectAll(".tick text")
-			.call(this.wrap, xBand.bandwidth())  */
 
 		}
 
@@ -220,14 +215,6 @@ class ChartView extends React.Component {
 				buffer = Math.floor((maxP - minP) * 0.1)
 
 			yScale.domain([minP - buffer, maxP + buffer])
-			/* candles.transition()
-				   .duration(800)
-				   .attr("y", (d) => yScale(Math.max(d.Open, d.Close)))
-				   .attr("height",  d => (d.Open === d.Close) ? 1 : yScale(Math.min(d.Open, d.Close))-yScale(Math.max(d.Open, d.Close)));
-				   
-			stems.transition().duration(800)
-				 .attr("y1", (d) => yScale(d.High))
-				 .attr("y2", (d) => yScale(d.Low)) */
 			
 			gY.transition().duration(800).call(d3.axisLeft().scale(yScale));
 
