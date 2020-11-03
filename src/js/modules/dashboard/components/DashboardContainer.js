@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import DashboardView from './DashboardView';
-import {getChartData} from '../actions/DashboardAction'
+import {getChartData, updateLiveChart} from '../actions/DashboardAction'
 
 const mapStateToProps = (state, ownProps) => {
     const { dashboardData } = state;
@@ -15,6 +15,9 @@ const mapDispatchToProps = dispatch => {
     return {
         getChartData: () => {
             dispatch( getChartData() )
+        },
+        updateLiveChart: data => {
+            dispatch(updateLiveChart(data))
         }
     }
 }

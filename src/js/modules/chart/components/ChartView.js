@@ -7,7 +7,8 @@ class ChartView extends React.Component {
 
 		this.state = {
             stat: {},
-            selectedYear: "1"
+            selectedYear: "1",
+            candelColor: "green"
         };
     }
 
@@ -128,13 +129,20 @@ class ChartView extends React.Component {
                 tooltipDiv.html("Date: " + (i.Date.getFullYear()+"-"+i.Date.getDay()+"-"+months[i.Date.getMonth()]) + "<br/> Volume: "  + i.Volume)	
                 .style("left", (d.pageX) + "px")		
                 .style("top", (d.pageY - 28) + "px");	
-                this.setState({stat: i})		
+
+                setTimeout(()=>{
+                    tooltipDiv.transition()		
+                    .duration(200)				
+                    .style("opacity", 0);
+                }, 1000)
+                this.setState({stat: i})
+                this.setState({candelColor: (i.Open > i.Close) ? "red" : "green"})		
             })
             .on("mouseout", (d, i) => {
                 d.target.removeAttribute("style")
-                tooltipDiv.transition()		
+                /* tooltipDiv.transition()		
                 .duration(200)		
-                .style("opacity", 0);	
+                .style("opacity", 0);	 */
              })
             
         // draw high and low
@@ -268,15 +276,17 @@ class ChartView extends React.Component {
 			<React.Fragment>
                 <div className="chart_header">
                     <span className="chartHeaderAttr">Volume :</span>
-                    <span className="chartHeaderValue">{this.state.stat.Volume}</span>
+                    <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.Volume}</span>
                     <span className="chartHeaderAttr">High :</span>
-                    <span className="chartHeaderValue">{this.state.stat.High}</span>
+                    <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.High}</span>
                     <span className="chartHeaderAttr">Low :</span>
-                    <span className="chartHeaderValue">{this.state.stat.Low}</span>
+                    <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.Low}</span>
                     <span className="chartHeaderAttr">Close :</span>
-                    <span className="chartHeaderValue">{this.state.stat.Close}</span>
+                    <span className="chartHeaderValue" style={{color:this.state.candelColor}}>{this.state.stat.Close}</span>
                 </div>
-                <div className="chart_sub_header">
+                {
+                    this.props.homePage &&
+                    <div className="chart_sub_header">
                     <span className={`subVal${this.state.selectedYear=== "1"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "1")}>1Y</span>
                     <span className={`subVal${this.state.selectedYear=== "2"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "2")}>2Y</span>
                     <span className={`subVal${this.state.selectedYear=== "3"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "3")}>3Y</span>
@@ -286,8 +296,9 @@ class ChartView extends React.Component {
                     <span className={`subVal${this.state.selectedYear=== "7"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "7")}>7Y</span>
                     <span className={`subVal${this.state.selectedYear=== "8"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "8")}>8Y</span>
                     <span className={`subVal${this.state.selectedYear=== "9"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "9")}>9Y</span>
-                    <span className={`subVal${this.state.selectedYear=== "10"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "10")}>10Y</span>
+                    <span className={`subVal${this.state.selectedYear=== "10"? " active" : ""}`} onClick={this.onSubMenuClick.bind(this, "10")}>All</span>
                 </div>
+                }
                 <div className="chart_container">
                     <svg id="container"></svg>
                 </div>

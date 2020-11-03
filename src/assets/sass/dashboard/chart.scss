@@ -137,3 +137,23 @@
     background: #FFFFFF;
   }
 }
+
+.tab_header {
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #c3c3c3;
+  text-align: center;
+
+  .home, .live_chart {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .home.active, .live_chart.active {
+    color: blue;
+    text-decoration: underline;
+    background: aliceblue;
+  }
+}
